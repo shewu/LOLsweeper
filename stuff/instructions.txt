@@ -1,0 +1,8 @@
+7
+Welcome to Macs against PCs!
+The goal of the game is to prevent the PCs underground from taking over the world by covering them with Macintoshes, but you don't know where the PCs are.
+Luckily, PCs only occupy less than half the grid. The cells not occupied by PCs are numbers that tell how many PC surround that cell.
+If you think a cell doesn't contain a PC, left click it to reveal how many PCs are around it. If you do think a cell has a PC, right click it to put a Mac on top of it.
+But if you're not so lucky and uncover a PC, bad things will happen..., but "SAFE MODE" can save everything!
+Oh, one last thing: placing a Mac costs $19.50 and opening a cell costs $2.50.
+Enjoy!
