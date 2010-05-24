@@ -39,13 +39,16 @@ public class MinePanel extends JPanel {
 		panelHeight = h;
 		addMouseListener(new MouseAdapter() {
 			public void mouseClicked(MouseEvent e) {
-				if(didFail || didWin) return;
+				if(didFail || didWin) {
+					return;
+				}
+
 				if(e.getButton() == 1) {
 					processClick(e.getX()/50, e.getY()/50);
-				}
-				else if(e.getButton() == 3) {
+				} else if(e.getButton() == 3) {
 					setQuestion(e.getX()/50, e.getY()/50);
 				}
+
 				if(DEBUG) {
 					System.out.println("remaining $: "+money);
 				}
@@ -64,10 +67,7 @@ public class MinePanel extends JPanel {
 	
 	public boolean saveGame() {
 		File sav = new File("game.sav");
-		if(sav.exists()) {
-			return false;
-		}
-		return true;
+		return (sav.exists()) ? false : true;
 	}
 	
 	public void restart() {
