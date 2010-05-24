@@ -40,8 +40,7 @@ public class leFrame extends JFrame {
 				}
 			});
 		}
-*/		
-/*
+
 		JButton button = new JButton("New Game");
 		button.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
@@ -55,10 +54,14 @@ public class leFrame extends JFrame {
 		moneytf.setText(new Double(p.getMoney()).toString());
 		controls.add(new JLabel("Progress"));
 		tf.setEditable(false);
+		
 		controls.add(tf);
 		controls.add(new JLabel("Cash Remaining"));
 		moneytf.setEditable(false);
 		controls.add(moneytf);
+
+		timetf.setEditable(false);
+		controls.add(new JLabel("Time"));
 		
 		p.addMouseListener(new MouseAdapter() {
 			public void mouseClicked(MouseEvent e) {
