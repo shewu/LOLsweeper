@@ -5,17 +5,29 @@ import java.awt.event.*;
 import com.apple.eawt.*;
 
 public class leFrame extends JFrame {
+
 	MinePanel p = new MinePanel(800, 800);
+
 	JPanel controls = new JPanel();
 	JPanel mainMenu = new JPanel();
+
 	static final JMenuBar bar = new JMenuBar();
+
 	JMenuItem newItem, openItem, saveItem, showScoresItem, helpItem;
+
 	JMenu file = new JMenu("File");
 	JMenu help = new JMenu("Help");
+
 	JTextField tf = new JTextField(5);
 	JTextField moneytf = new JTextField(5);
 	JTextField timetf = new JTextField(5);
+
 	PrefPane prefs = new PrefPane();
+
+	boolean gameRunning = false;
+
+	Thread t;
+
 	public leFrame() {
 		setSize(800, 850);
 		setTitle("Macs Against PCs");
@@ -66,7 +78,11 @@ public class leFrame extends JFrame {
 		p.addMouseListener(new MouseAdapter() {
 			public void mouseClicked(MouseEvent e) {
 				tf.setText(p.getProgress());
-				moneytf.setText(new Double(p.getMoney()).toString());				
+				moneytf.setText(new Double(p.getMoney()).toString());
+				if(!gameRunning) {
+					gameRunning = true;
+					p.startTimer();
+				}
 			}
 		});
 		
@@ -110,3 +126,4 @@ public class leFrame extends JFrame {
 		});
 	}
 }
+

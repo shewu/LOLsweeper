@@ -33,6 +33,8 @@ public class MinePanel extends JPanel {
 	BufferedImage sure = null;
 	BufferedImage unsure = null;
 	
+	long startTime;
+
 	public MinePanel(int w, int h) {
 		setBackground(Color.white);
 		panelWidth = w;
@@ -69,7 +71,15 @@ public class MinePanel extends JPanel {
 		File sav = new File("game.sav");
 		return (sav.exists()) ? false : true;
 	}
-	
+
+	public void startTimer() {
+		startTime = System.currentTimeMillis();
+	}
+
+	public long getTimeElapsed() {
+		return (System.currentTimeMillis()-startTime)/1000;
+	}
+
 	public void restart() {
 		didClick = didFail = didWin = didWriteScore = false;
 		money = 899.;
