@@ -2,7 +2,7 @@ import javax.swing.*;
 import java.awt.*;
 import java.awt.event.*;
 
-import com.apple.eawt.*;
+//import com.apple.eawt.*;
 
 public class leFrame extends JFrame {
 

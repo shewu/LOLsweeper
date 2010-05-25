@@ -37,3 +37,4 @@ public class LoseFrame extends JFrame {
 		setVisible(true);
 	}
 }
+
